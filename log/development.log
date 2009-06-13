@@ -1,0 +1,83 @@
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (73.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (121.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20090613212823)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090613212823')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("topics")[0m
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 14:31:37) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 3877ms (View: 3863, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2009-06-13 14:33:55) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 52ms (View: 25, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2009-06-13 14:34:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"fqMROiHeFVEKtY5z7OK54/Jkja723l4as4AZaYk+ekI=", "topic"=>{"title"=>"How to Bake Muffins", "description"=>"Baking 101"}}
+  [4;35;1mTopic Create (3.0ms)[0m   [0mINSERT INTO "topics" ("updated_at", "title", "description", "created_at") VALUES('2009-06-13 21:34:39', 'How to Bake Muffins', 'Baking 101', '2009-06-13 21:34:39')[0m
+Redirected to http://localhost:3000/topics/1
+Completed in 181ms (DB: 3) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2009-06-13 14:34:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#edit (for 127.0.0.1 at 2009-06-13 14:34:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 119ms (View: 95, DB: 0) | 200 OK [http://localhost/topics/1/edit]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 14:35:07) [GET]
+  [4;36;1mTopic Load (3.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 44ms (View: 18, DB: 3) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#destroy (for 127.0.0.1 at 2009-06-13 14:35:13) [DELETE]
+  Parameters: {"authenticity_token"=>"fqMROiHeFVEKtY5z7OK54/Jkja723l4as4AZaYk+ekI=", "id"=>"1"}
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+  [4;36;1mTopic Destroy (3.0ms)[0m   [0;1mDELETE FROM "topics" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/topics
+Completed in 112ms (DB: 3) | 302 Found [http://localhost/topics/1]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 14:35:13) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/topics]
