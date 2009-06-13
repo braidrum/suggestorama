@@ -81,3 +81,200 @@ Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 14:35:13) [GET]
 Rendering template within layouts/topics
 Rendering topics/index
 Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 15:24:08) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 136ms (View: 34, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 15:24:17) [GET]
+  [4;35;1mTopic Load (2.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 35ms (View: 8, DB: 2) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 15:24:33) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 15:25:07) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 104ms (View: 32, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2009-06-13 15:25:13) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 35ms (View: 20, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2009-06-13 15:25:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"fqMROiHeFVEKtY5z7OK54/Jkja723l4as4AZaYk+ekI=", "topic"=>{"title"=>"Bake Muffins", "description"=>""}}
+  [4;35;1mTopic Create (1.0ms)[0m   [0mINSERT INTO "topics" ("updated_at", "title", "description", "created_at") VALUES('2009-06-13 22:25:22', 'Bake Muffins', '', '2009-06-13 22:25:22')[0m
+Redirected to http://localhost:3000/topics/2
+Completed in 240ms (DB: 1) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2009-06-13 15:25:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 108ms (View: 13, DB: 1) | 200 OK [http://localhost/topics/2]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2009-06-13 15:25:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 42ms (View: 12, DB: 1) | 200 OK [http://localhost/topics/2]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2009-06-13 15:25:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 36ms (View: 6, DB: 1) | 200 OK [http://localhost/topics/2]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 15:25:40) [GET]
+  [4;35;1mTopic Load (2.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 29ms (View: 12, DB: 2) | 200 OK [http://localhost/topics]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2009-06-13 15:25:56) [POST]
+  Parameters: {"topic_id"=>"2", "authenticity_token"=>"fqMROiHeFVEKtY5z7OK54/Jkja723l4as4AZaYk+ekI="}
+
+ActionController::UnknownAction (No action responded to create. Actions: ):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing VotesController#create (for 127.0.0.1 at 2009-06-13 15:26:43) [POST]
+  Parameters: {"topic_id"=>"2", "authenticity_token"=>"fqMROiHeFVEKtY5z7OK54/Jkja723l4as4AZaYk+ekI="}
+
+ActionController::UnknownAction (No action responded to create. Actions: ):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 15:40:43) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 95ms (View: 33, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2009-06-13 15:40:48) [POST]
+  Parameters: {"topic_id"=>"2", "authenticity_token"=>"fqMROiHeFVEKtY5z7OK54/Jkja723l4as4AZaYk+ekI="}
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+
+ActiveRecord::StatementInvalid (Could not find table 'votes'):
+  app/controllers/votes_controller.rb:4:in `create'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (169.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20090613212823)
+Migrating to CreateVotes (20090613215840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090613215840')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("topics")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("votes")[0m
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 15:41:47) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 115ms (View: 42, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2009-06-13 15:41:49) [POST]
+  Parameters: {"topic_id"=>"2", "authenticity_token"=>"fqMROiHeFVEKtY5z7OK54/Jkja723l4as4AZaYk+ekI="}
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+  [4;35;1mVote Create (2.0ms)[0m   [0mINSERT INTO "votes" ("topic_id", "updated_at", "created_at") VALUES(2, '2009-06-13 22:41:49', '2009-06-13 22:41:49')[0m
+Redirected to http://localhost:3000/topics
+Completed in 203ms (DB: 2) | 302 Found [http://localhost/topics/2/votes]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 15:41:49) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2009-06-13 15:42:21) [POST]
+  Parameters: {"topic_id"=>"2", "authenticity_token"=>"fqMROiHeFVEKtY5z7OK54/Jkja723l4as4AZaYk+ekI="}
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+  [4;35;1mVote Create (2.0ms)[0m   [0mINSERT INTO "votes" ("topic_id", "updated_at", "created_at") VALUES(2, '2009-06-13 22:42:21', '2009-06-13 22:42:21')[0m
+Redirected to http://localhost:3000/topics
+Completed in 193ms (DB: 2) | 302 Found [http://localhost/topics/2/votes]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2009-06-13 15:42:22) [GET]
+  [4;36;1mTopic Load (2.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 25ms (View: 11, DB: 2) | 200 OK [http://localhost/topics]
